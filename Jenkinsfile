@@ -54,7 +54,7 @@ stage('SonarQube analysis') {
          }
          
          //  Clean the docker containers if already running
-        /* stage ('Clean Up'){
+       /* stage ('Clean Up'){
             steps{
                 sh returnStatus: true, script: 'docker stop $(docker ps -a | grep ${JOB_NAME} | awk \'{print $1}\')'
                 sh returnStatus: true, script: 'docker rmi $(docker images | grep ${registry} | awk \'{print $3}\') --force' //this will delete all images
@@ -97,7 +97,8 @@ stage('SonarQube analysis') {
         
          stage('Deploy') {
            steps {
-                sh label: '', script: "docker run -d --name booksapp  -p 9091:9091 ${img}"
+           println("${JOB_NAME}")
+                sh label: '', script: "docker run -d --name ${JOB_NAME}  -p 9091:9091 ${img}"
                
                
           }

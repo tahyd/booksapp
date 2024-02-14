@@ -97,7 +97,7 @@ stage('SonarQube analysis') {
         
          stage('Deploy') {
            steps {
-                sh label: '', script: "docker run -d --name ${JOB_NAME}  -p 9091:9091 ${img}"
+                sh label: '', script: "docker run -d --name booksapp  -p 9091:9091 ${img}"
                
                
           }

@@ -1,1 +1,1 @@
-insert into book values (101,'Java','Dietel',2000)
+insert into book values (102,'Java','Dietel',2000)

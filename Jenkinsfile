@@ -7,6 +7,10 @@ pipeline {
         dockerImage = ""
         
     }
+    tools{
+    jdk 'jdk17'
+    maven 'maven3'
+    }
     agent any 
     
     stages {

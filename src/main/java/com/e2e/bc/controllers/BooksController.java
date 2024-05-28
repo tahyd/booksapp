@@ -37,7 +37,7 @@ public class BooksController {
 	public String home() {
 		
 		logger.info("Hello World");
-		return "HelloWorld -:)(:-";
+		return "HelloWorld! -:)(:-";
 	}
 	
 	
